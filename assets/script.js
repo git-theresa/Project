@@ -1,4 +1,4 @@
-//DEAD CODED SOCIETY PSUEDO-CODED
+//DEAD CODED SOCIETY PSEUDO-CODED
 // what our application does?
 // who is our application for?
 // first step to create? 
