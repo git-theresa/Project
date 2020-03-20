@@ -13,3 +13,5 @@
 // What components do we need variables for
 //  1. Artist Object= Genre, year started, number one hit (top 5 hits)
 //  2. Articles appear on page when? after artist's stats? do we click a "see more button"
+
+//tasteDive api key: 359773-project1-J9FLOEVJ
