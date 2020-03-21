@@ -80,7 +80,7 @@ searchArtist();
 // document.ready function(){
 $('#searchBtn').on('click', function(event) {
 	event.preventDefault();
-	var userInput = $("#searchTerm").val().trim();
+	//var userInput = $("#searchTerm").val().trim();
 
 	run();
 });
