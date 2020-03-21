@@ -50,7 +50,7 @@
 //     console.log(response);
 // });
 //=======
-//d7bdd05829c75c43b18aac4ec6f2c45871a06f85;
+
 var fmURLBase =
 	'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=bfab0ca7754766e291154f9b56c5cf7b&format=json';
 var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
@@ -80,8 +80,6 @@ searchArtist();
 // document.ready function(){
 $('#searchBtn').on('click', function(event) {
 	event.preventDefault();
-	console.log(results)
-
 	var userInput = $("#searchTerm").val().trim();
 
 	run();
