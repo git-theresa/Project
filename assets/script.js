@@ -49,7 +49,7 @@ $.ajax({
 .then(function (response) {
     console.log(response);
 });
-=======
+//=======
 //d7bdd05829c75c43b18aac4ec6f2c45871a06f85;
 var fmURLBase =
 	'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=bfab0ca7754766e291154f9b56c5cf7b&format=json';
@@ -89,8 +89,5 @@ $('#searchBtn').on('click', function(event) {
 // document.ready end
 // }
 
-//tasteDive api key: 359773-project1-J9FLOEVJ
 //  HEAD
 //  1762a23ec065abade2b42085b6b5f2e60f7118d8
-
-// d7bdd05829c75c43b18aac4ec6f2c45871a06f85
