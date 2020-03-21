@@ -15,3 +15,21 @@
 //  2. Articles appear on page when? after artist's stats? do we click a "see more button"
 
 //tasteDive api key: 359773-project1-J9FLOEVJ
+
+$.ajax({
+    url: queryURL,
+    method: "GET"
+})
+
+.then(function (response) {
+    console.log(response);
+});
+
+$.ajax({
+    url: queryURL,
+    method: "GET"
+})
+
+.then(function (response) {
+    console.log(response);
+});
