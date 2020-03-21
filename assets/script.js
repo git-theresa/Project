@@ -14,7 +14,16 @@
 //  1. Artist Object= Genre, year started, number one hit (top 5 hits)
 //  2. Articles appear on page when? after artist's stats? do we click a "see more button"
 
-//tasteDive api key: 359773-project1-J9FLOEVJ
+//tasteDive api key: 359773-qJams-F4U551BF
+
+//concept borrowed from wk 16, activity 6
+function buildQueryURL() {
+
+    var queryURL = "https://tastedive.com/music/like.json?"
+
+    var queryParams = { "api-key: 359773-qJams-F4U551BF" };
+};
+
 
 $.ajax({
     url: queryURL,
