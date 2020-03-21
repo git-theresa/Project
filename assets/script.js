@@ -19,9 +19,10 @@
 //concept borrowed from wk 16, activity 6
 function buildQueryURL() {
 
-    var queryURL = "https://tastedive.com/music/like.json?"
+    var queryURL = "https://tastedive.com/music/like.json?";
 
-    var queryParams = { "api-key: 359773-qJams-F4U551BF" };
+    var queryParams = {"api-key": "359773-qJams-F4U551BF"};
+
 };
 
 
