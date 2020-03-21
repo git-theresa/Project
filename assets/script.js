@@ -14,23 +14,27 @@
 //  1. Artist Object= Genre, year started, number one hit (top 5 hits)
 //  2. Articles appear on page when? after artist's stats? do we click a "see more button"
 
- d7bdd05829c75c43b18aac4ec6f2c45871a06f85
+ //d7bdd05829c75c43b18aac4ec6f2c45871a06f85
+ var userInput = "";
 var fmURLBase = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=bfab0ca7754766e291154f9b56c5cf7b&format=json"
 var fmAPIKey = "bfab0ca7754766e291154f9b56c5cf7b"
 var fmURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + "&q="  + userInput + "api_key=" + fmAPIKey;
 console.log(fmURL);
-var userInput = "";
+
  function searchArtist(){
      console.log(searchArtist);
      $.ajax({url: fmURL + userInput, method: "GET"})
      .then(function(response){
-    $("#userInput").empty();
-    $("#artist").empty();
 
-    $("#artist").text(response.main.artist.name);
-    console.log(response.main.artist.name);
-    $("#listen").text(response.main.artist.url);
-    $("#bio").text(response.main.tags.tag.bio);
+
+       console.log(response);
+    //$("#userInput").empty();
+    //$("#artist").empty();
+
+    //$("#artist").text(response.main.artist.name);
+    //console.log(response.main.artist.name);
+    //$("#listen").text(response.main.artist.url);
+    //$("#bio").text(response.main.tags.tag.bio);
 
 
 
