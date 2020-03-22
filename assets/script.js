@@ -4,37 +4,28 @@ var fmURLBase =
 var fmURLTag =
 	' /2.0/?method=tag.getinfo&tag=disco&api_key=YOUR_API_KEY&format=json';
 var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
-var fmURL =
 
-// 	'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' +
-// 	userInput +
-// 	'&api_key=' +
-// 	fmAPIKey +
-// 	'&format=json';
-
-console.log(fmURL);
-// Other Global Variables for all functions
-var userInput = '';
-
-	'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=' + 	fmAPIKey +
-    '&format=json';
-
-console.log(fmURL);
-// Other Global Variables for all functions
-var artist = 'userInput';
 var userInput= $("#userInput").val().trim();
+// var fmURL = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + 	userInput + '&api_key=' + fmAPIKey + '&format=json';
+
+
+// Other Global Variables for all functions
+
 
 
 // Last FM API call:
 function searchArtist(artist) {
-	console.log(artist);
+    console.log(artist);
+var fmURL='http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=' + 	fmAPIKey +
+    '&format=json';    
+console.log(fmURL);
 	$.ajax({ url: fmURL, method: 'GET' }).then(function(response) {
 		// $('#userInput').empty();
 
 		// $('#artist').empty();
 		console.log(response);
-		$('#artist').text(response.artist[0].artist[0]);
-		console.log(response.artist.artist[0].artist.name);
+		$('#artist').text(response.artist.name);
+		console.log(response.artist.name);
 
         // $('#artist').empty();
     console.log(response);
@@ -42,8 +33,9 @@ function searchArtist(artist) {
 		$('#artist').text(response.artist);
 		console.log(response.artist);
 
-		$('#listen').text(response.main.artist.url);
-		$('#bio').text(response.main.tags.tag.bio);
+        $('#listen').text(response.artist.url);
+        // <a> for url
+		$('#bio').text(response.artist.bio.summary);
 		//$("#userInput").empty();
 		//$("#artist").empty();
 
