@@ -5,20 +5,23 @@ var fmURLTag =
 	' /2.0/?method=tag.getinfo&tag=disco&api_key=YOUR_API_KEY&format=json';
 var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
 
-var userInput= $("#userInput").val().trim();
+var userInput = $('#userInput')
+	.val()
+	.trim();
 // var fmURL = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + 	userInput + '&api_key=' + fmAPIKey + '&format=json';
-
 
 // Other Global Variables for all functions
 
-
-
 // Last FM API call:
 function searchArtist(artist) {
-    console.log(artist);
-var fmURL='http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=' + 	fmAPIKey +
-    '&format=json';    
-console.log(fmURL);
+	console.log(artist);
+	var fmURL =
+		'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' +
+		artist +
+		'&api_key=' +
+		fmAPIKey +
+		'&format=json';
+	console.log(fmURL);
 	$.ajax({ url: fmURL, method: 'GET' }).then(function(response) {
 		// $('#userInput').empty();
 
@@ -27,14 +30,14 @@ console.log(fmURL);
 		$('#artist').text(response.artist.name);
 		console.log(response.artist.name);
 
-        // $('#artist').empty();
-    console.log(response);
-    
+		// $('#artist').empty();
+		console.log(response);
+
 		$('#artist').text(response.artist);
 		console.log(response.artist);
 
-        $('#listen').text(response.artist.url);
-        // <a> for url
+		$('#listen').text(response.artist.url);
+		// <a> for url
 		$('#bio').text(response.artist.bio.summary);
 		//$("#userInput").empty();
 		//$("#artist").empty();
@@ -87,19 +90,21 @@ console.log(fmURL);
 //document.ready function(){
 $('#searchBtn').on('click', function(event) {
 	event.preventDefault();
-	var userInput = $("#userInput").val().trim();
+	var userInput = $('#userInput')
+		.val()
+		.trim();
 
 	searchArtist(userInput);
 });
 
 //sidenav
-const sideNav = document.querySelector('.sidenav');
-M.Sidenav.init(sideNav, {});
+//const sideNav = document.querySelector('.sidenav');
+//M.Sidenav.init(sideNav, {});
 
 //initialize image
-$(document).ready(function() {
-	$('.parallax').parallax();
-});
+//$(document).ready(function() {
+//	$('.parallax').parallax();
+//});
 
 // document.ready end
 // }
