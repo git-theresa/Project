@@ -11,32 +11,106 @@
 			href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
 			rel="stylesheet"
 		/>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Gravitas+One|Lobster|Roboto:100|Staatliches|Work+Sans:200&display=swap"
+			rel="stylesheet"
+		/>
 
 		<script
 			src="https://kit.fontawesome.com/0ded37e0fb.js"
 			crossorigin="anonymous"
 		></script>
+
+
+
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+
 		<title>Fast Facts about your Favorite Artist</title>
 	</head>
 
 	<body>
+
+		<!--Section: Navigation-->
+		<nav class="indigo navbar-fixed" role="navigation">
+			<div class="nav-wrapper container">
+				<a href="#" class="brand-logo" id="logo-container"></a>
+				<!--disable nav
+				<ul class="right hide-on-med-and-down">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#search">Search</a></li>
+					<li><a href="#artist">Artist</a></li>
+				</ul>
+				<a href="#" data-target="nav-mobile" class="sidenav-trigger"
+					><i class="material-icons">menu</i></a
+				>-->
+			</div>
+		</nav>
+		<!--
+		<ul class="sidenav" id="nav-mobile">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#search">Search</a></li>
+			<li><a href="#artist">Artist</a></li>
+		</ul>-->
+		<!--Section: Main Hero Image-->
+		<div class="col s12">
+			<img class="responsive-img" src="assets/.img/jam_hero.jpg" />
+		</div>
+
+		<!--Artist Search Section-->
+
 		<div class="container">
 			<h1>Artist Search</h1>
-			<input type="text" placeholder="Search" id="userInput">
-			<button class="btn waves-effect waves-light" type="submit" name="action" id="searchBtn">
+			<input type="text" placeholder="Search" id="userInput" />
+			<button
+				class="btn waves-effect waves-light"
+				type="submit"
+				name="action"
+				id="searchBtn"
+			>
 				Submit
 				<i class="material-icons right"></i>
 			</button>
+
 		</div class="artist"></div>
 		<div class="listen"></div>
 		<div class="bio"></div>
+
+
+			<!--Artist Bio Info Section-->
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m3 l3 circle" id="artistImg"></div>
+					<div class="col s12 m3 l9" id="artistName"><h1>cher</h1></div>
+					<div class="col s12"></div>
+					<ul class="collapsible">
+						<li>
+							<div class="collapsible-header">
+								<i class="material-icons">whatshot</i>Biography
+							</div>
+							<div class="collapsible-body" id="artistSummary"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
 
 		<!-- Inserted Links / DO NOT TOUCH -->
 
 		<!-- Insert jQuery Link -->
 
 		<!-- Insert jQuery Link -->
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 		<!-- Insert JavaScript Link -->
 
