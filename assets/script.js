@@ -45,8 +45,6 @@ $('#searchBtn').on('click', function(event) {
 // document.ready end
 // }
 
-//tasteDive api key: 359773-project1-J9FLOEVJ
-//  HEAD
+
+
 //  1762a23ec065abade2b42085b6b5f2e60f7118d8
-
-
