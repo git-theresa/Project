@@ -10,7 +10,7 @@ var userInput= $("#userInput").val().trim();
 // var fmURL = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + 	userInput + '&api_key=' + fmAPIKey + '&format=json';
 
 
-// Other Global Variables for all functions
+
 
 
 
@@ -21,59 +21,31 @@ var fmURL='http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + ar
     '&format=json';    
 console.log(fmURL);
 	$.ajax({ url: fmURL, method: 'GET' }).then(function(response) {
-		// $('#userInput').empty();
+        console.log(response);
 
-		// $('#artist').empty();
-		console.log(response);
+        // EMPTY DIVS BEFORE NEW SEARCH ENTERED:
+        $('#userInput').empty();
+        $('#artist').empty();
+        $('#listen').empty();
+		$('#bio').empty();
+		        //   BEGIN RESPONSES FROM AJAX CALL
 		$('#artist').text(response.artist.name);
-		console.log(response.artist.name);
-
-        // $('#artist').empty();
-    console.log(response);
-    
-		$('#artist').text(response.artist);
-		console.log(response.artist);
-
+        console.log(response.artist.name);
+        $('#artistName').append('Artist Name: ' + response.artist.name);
         $('#listen').text(response.artist.url);
         // <a> for url
-		$('#bio').text(response.artist.bio.summary);
-		//$("#userInput").empty();
-		//$("#artist").empty();
+        $('#bio').text(response.artist.bio.summary);
+        
+		
 
-		//$("#artist").text(response.main.artist.name);
-		//console.log(response.main.artist.name);
-		//$("#listen").text(response.main.artist.url);
-		//$("#bio").text(response.main.tags.tag.bio);
+		
+	
 
 		// end .then(function(response)...Do not remove "  }):  "
 	});
 }
 
-var fmURLBase =
-	'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=bfab0ca7754766e291154f9b56c5cf7b&format=json';
-var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
-var fmURL =
-	'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' +
-	userInput +
-	'&api_key=' +
-	fmAPIKey +
-	'&format=json';
-console.log(fmURL);
-var userInput = '';
-function searchArtist() {
-	console.log(searchArtist);
-	$.ajax({ url: fmURL + userInput, method: 'GET' }).then(function(response) {
-		$('#userInput').empty();
-		$('#artist').empty();
-		$('#artist').text(response.main.artist.name);
-		console.log(response.main.artist.name);
-		$('#listen').text(response.main.artist.url);
-		$('#bio').text(response.main.tags.tag.bio);
-	});
-}
-searchArtist();
-// end .then(function(response)
-// end function searchArtist
+
 
 //document.ready function(){
 $('#searchBtn').on('click', function(event) {
@@ -83,7 +55,7 @@ $('#searchBtn').on('click', function(event) {
 	searchArtist(userInput);
 });
 
-//sidenav
+sidenav
 const sideNav = document.querySelector('.sidenav');
 M.Sidenav.init(sideNav, {});
 
