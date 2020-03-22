@@ -1,21 +1,52 @@
-//DEAD CODED SOCIETY PSEUDO-CODED
-// what our application does?
-// who is our application for?
-// first step to create?
-// --- we know we need the user to "input" an artist's name, then click a "button"
-// API 1. - Last FM
-// API 2. - Thrive
+// Last FM URL + Base + API Keys ONLY
+var fmURLBase =
+	'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=bfab0ca7754766e291154f9b56c5cf7b&format=json';
+var fmURLTag =
+	' /2.0/?method=tag.getinfo&tag=disco&api_key=YOUR_API_KEY&format=json';
+var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
 
-// Establish API Key Variables
-// URL Base Name
-// URL Base Name + API Key
-// What components do we need variables for
-//  1. Artist Object= Genre, year started, number one hit (top 5 hits)
-//  2. Articles appear on page when? after artist's stats? do we click a "see more button"
+var userInput= $("#userInput").val().trim();
+// var fmURL = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + 	userInput + '&api_key=' + fmAPIKey + '&format=json';
 
-//d7bdd05829c75c43b18aac4ec6f2c45871a06f85
 
-// end function searchArtist
+// Other Global Variables for all functions
+
+
+
+// Last FM API call:
+function searchArtist(artist) {
+    console.log(artist);
+var fmURL='http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=' + 	fmAPIKey +
+    '&format=json';    
+console.log(fmURL);
+	$.ajax({ url: fmURL, method: 'GET' }).then(function(response) {
+		// $('#userInput').empty();
+
+		// $('#artist').empty();
+		console.log(response);
+		$('#artist').text(response.artist.name);
+		console.log(response.artist.name);
+
+        // $('#artist').empty();
+    console.log(response);
+    
+		$('#artist').text(response.artist);
+		console.log(response.artist);
+
+        $('#listen').text(response.artist.url);
+        // <a> for url
+		$('#bio').text(response.artist.bio.summary);
+		//$("#userInput").empty();
+		//$("#artist").empty();
+
+		//$("#artist").text(response.main.artist.name);
+		//console.log(response.main.artist.name);
+		//$("#listen").text(response.main.artist.url);
+		//$("#bio").text(response.main.tags.tag.bio);
+
+		// end .then(function(response)...Do not remove "  }):  "
+	});
+}
 
 //tasteDive api key: 359773-qJams-F4U551BF
 
@@ -35,7 +66,6 @@
 //     return queryURL + $.param(queryParams);
 // };
 
-
 // $.ajax({
 //     url: queryURL,
 //     method: "GET"
@@ -54,50 +84,25 @@
 //     console.log(response);
 // });
 
-//d7bdd05829c75c43b18aac4ec6f2c45871a06f85;
+//document.ready function(){
+$('#searchBtn').on('click', function(event) {
+	event.preventDefault();
+	var userInput = $("#userInput").val().trim();
 
-$('#searchBtn').on('click', function (event) {
-    event.preventDefault();
-    var fmURLBase =
-        'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=bfab0ca7754766e291154f9b56c5cf7b&format=json';
-    var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
-    var fmURL = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + userInput + '&api_key=' + fmAPIKey + '&format=json';
+	searchArtist(userInput);
+});
 
-   
-    //var userInput = '';
-    var userInput = $('#userInput').val();
-        $.ajax({ 
-            url: fmURL, 
-            method: 'GET' 
-        })
-            .then(function (response) {
+//sidenav
+const sideNav = document.querySelector('.sidenav');
+M.Sidenav.init(sideNav, {});
 
-            console.log(response);
-            console.log(fmURL);
-            
-           // $('#userInput').empty();
-           // $('#artist').empty();
-            $('#artist').text(response.artist.name);
-            console.log(response.artist.name);
-            $('#listen').text(response.artist.url);
-            $('#bio').text(response.tags.tag.bio);
-        });
-
-    
-    //searchArtist('cher');
-    // end .then(function(response)
-    // end function searchArtist
-
-    // document.ready function(){
-
-
-    // var userInput = $("#searchTerm").val().trim();
+//initialize image
+$(document).ready(function() {
+	$('.parallax').parallax();
+});
 
 
 });
 //run(searchArtist);
 // document.ready end
 // }
-
-//  HEAD
-//  1762a23ec065abade2b42085b6b5f2e60f7118d8
