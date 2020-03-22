@@ -10,7 +10,7 @@ A music website that shows your favorit artist biography, events and songs.
 
 ## Instructions
 - Enter an artist name in the search box and click "SUBMIT" or hit "Enter" on your keyboard.
-- The artist biography and the artist's top 5 song are shown in...................
+- The artist biography, events and top 5 song are shown in...................
 
 ## Screenshot
 
@@ -22,7 +22,7 @@ HTML/CSS
 JavaScript
 jQuery
 Moment.js
-google Fonts
+Google Fonts
 
 ## Author
 1. Greg Clark
