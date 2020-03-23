@@ -40,9 +40,37 @@ function searchArtist(artist) {
         console.log(response.artist.bio.summary);
         $('artistSummary').append(response.artist.bio.summary);
         
+ // SIMILAR ARTIST FUNCTION
+ var fmURL =
+ 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' +
+ artist +
+ '&api_key=' +
+ fmAPIKey +
+ '&format=json';
+ $.ajax({url: fmURL, method: "GET"})
+ .then(function(similarArtist) {
+ console.log(similarArtist)
+ 
+// //  $('#similarArtist').empty();
+// $('similarArtist').text(response.similar.artist[0].name);
+// console.log(response.similar.artist.name);
+ 
 
-		// end .then(function(response)...Do not remove "  }):  "
-	});
+// for (var i = 0; i < 5; i++) {
+//     var similarArtistCard = $("<div class='card'>");
+//     var similarArtist = $("<div>");
+//     $("#similarArtist").
+    
+    
+
+
+// //END FOR LOOP AJAX 
+// }
+// END 
+ });
+// end .then(function(response)...Do not remove "  }):  "
+});
+// END MAIN FUNCTION
 }
 
 

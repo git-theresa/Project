@@ -1,28 +1,20 @@
 //tasteDive test file
 
-var apiKey: "359773-qJams-F4U551BF";
+//var tasteURL: https://tastedive.com/api/similar?q=cher&type=music&k359773-qJams-F4U551BF
+var apiKey = '359773-qJams-F4U551BF';
 
-//concept borrowed from wk 16, activity 6 (greg)
-// function buildQueryURL() {
+
 //generate artist object
-function artistData(search) {
-queryURL = "https://tastedive.com/api/similar?q=" +
-band +
-//type: 'band', +
-"&k" +
-apiKey;
-console.log(queryURL);
+var artistData = function(search) {
+	var queryURL =
+		'https://tastedive.com/api/similar?q=' + search + '&k' + apiKey;
+	console.log(queryURL);
 
-$.ajax({
-url: queryURL,
-method: "GET"
-});
-.then(function (response) {
-console.log(response);
-}
-artistData("Cher");
-
-
+	$.ajax({ url: queryURL, method: 'GET' }).then(function(response) {
+		console.log(response);
+	});
+};
+artistData('Cher');
 
 
 $('#searchBtn').on('click', function(event) {
@@ -31,5 +23,7 @@ $('#searchBtn').on('click', function(event) {
 		.val()
 		.trim();
 
-	searchArtist(userInput);
+	artistData(userInput);
 });
+
+
