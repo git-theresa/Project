@@ -1,6 +1,6 @@
 //tasteDive test file
 //var tasteURL: https://tastedive.com/api/similar?q=cher&k359773-qJams-F4U551BF;
-var apiKey: '359773-qJams-F4U551BF';
+var apiKey= '359773-qJams-F4U551BF';
 
 //generate artist object
 function artistData(search) {
@@ -20,5 +20,5 @@ $('#searchBtn').on('click', function(event) {
 		.val()
 		.trim();
 
-	artistData(search);
+	artistData(userInput);
 });
