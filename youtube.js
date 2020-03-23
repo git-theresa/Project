@@ -5,7 +5,7 @@ function clientLoad() {
 }
 //load api
 function loadAPI() {
-	gapi.client.setAPIkey('AIzaSyABC4gzAaZmyX7j_O05SyehCk55d6cBnjM');
+	gapi.client.setAPIkey;
 	console.log(loadAPI);
 }
 //call search when button clicked
