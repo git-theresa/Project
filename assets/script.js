@@ -63,5 +63,8 @@ $('#searchBtn').on('click', function(event) {
 //	$('.parallax').parallax();
 //});
 
+
+});
+//run(searchArtist);
 // document.ready end
 // }
