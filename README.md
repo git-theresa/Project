@@ -1,16 +1,15 @@
 # Fast Facts about your Favorite Artist
 
+A music website that provides a current picture, biography, events, and songs of your favorit artists. Also a recomendation for similar artists that you might like.
+
+
 # Live Link: 
 
 https://git-theresa.github.io/Project/
 
-
 ![](http://g.recordit.co/JzfjfQKV5L.gif)
 
 
-# About
-
-A music website that provides a current picture, biography, events and songs of your favorit artists. Also a recomendation for similar artists that you might like as well.
 
 # Technology Stacks
 
@@ -21,6 +20,12 @@ A music website that provides a current picture, biography, events and songs of 
 - jQuery
 - Moment.js
 - Google Fonts
+
+
+# Deployment 
+
+Enter an artist name in the artist search box and click "SUBMIT" or press "Enter" on your keyboard. The artist picture and biography will be shown under the search box. The artist's events and top 5 songs are shown in columns below as well as lists of similar artists you might like.
+
 
 # Contributors
 
@@ -35,6 +40,7 @@ A music website that provides a current picture, biography, events and songs of 
 
 |<a href="https://github.com/git-theresa " target="_blank">**Theresa Eatherly **</a> |
 | [![Theresa Eatherly](https://avatars3.githubusercontent.com/u/57425164?s=100&v=4)](https://github.com/git-theresa)|
+
 
 
 # License
