@@ -24,7 +24,8 @@ function searchArtist(artist) {
         $('#userInput').empty();
         $('#artist').empty();
         $('#listen').empty();
-		$('#bio').empty();
+        $('#bio').empty();
+        $('artistSummary').empty();
 		        //   BEGIN RESPONSES FROM AJAX CALL
 		$('#artist').text(response.artist.name);
         // Need to append to <h1> by child or create ID
