@@ -27,12 +27,17 @@ function searchArtist(artist) {
 		$('#bio').empty();
 		        //   BEGIN RESPONSES FROM AJAX CALL
 		$('#artist').text(response.artist.name);
+        // Need to append to <h1> by child or create ID
 
         console.log(response.artist.name);
-        $('#artistName').append('Artist Name: ' + response.artist.name);
+        // $('#artistName').append('Artist Name: ' + response.artist.name);
         $('#listen').text(response.artist.url);
+        console.log(response.artist.url);
+        // $('artistSummary').append(URL); 
         // <a> for url
         $('#bio').text(response.artist.bio.summary);
+        console.log(response.artist.bio.summary);
+        $('artistSummary').append(response.artist.bio.summary);
         
 
 		// end .then(function(response)...Do not remove "  }):  "
@@ -57,14 +62,14 @@ $('#searchBtn').on('click', function(event) {
 
 
 
-	searchArtist()
+	// searchArtist()
 //initialize image
 //$(document).ready(function() {
 //	$('.parallax').parallax();
 //});
 
 
-});
+
 //run(searchArtist);
 // document.ready end
 // }
