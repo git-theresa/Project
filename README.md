@@ -15,7 +15,7 @@ A music website that shows your favorit artist biography, events and songs.
 ## Screenshot
 
 
-## Built With
+## Technology Stacks
 Last.fm API
 TasteDive API
 HTML/CSS
@@ -24,8 +24,8 @@ jQuery
 Moment.js
 Google Fonts
 
-## Author
-1. Greg Clark
-2. Kristin Center
-3. Naritchaya Louis
-4. Theresa Eatherly
+## Contributors
+1. https://github.com/gregroyclark
+2. https://github.com/kristincenters
+3. https://github.com/NKLouis
+4. https://github.com/git-theresa
