@@ -1,38 +1,35 @@
 //tasteDive test file
 
-//tasteDive api key: 359773-qJams-F4U551BF
+var apiKey: "359773-qJams-F4U551BF";
 
 //concept borrowed from wk 16, activity 6 (greg)
 // function buildQueryURL() {
+//generate artist object
+function artistData(search) {
+queryURL = "https://tastedive.com/api/similar?q=" +
+band +
+//type: 'band', +
+"&k" +
+apiKey;
+console.log(queryURL);
 
-//     var queryURL = "https://tastedive.com/music/like.json?";
-
-//     var queryParams = {"api-key": "359773-qJams-F4U551BF"};
-
-//     queryParams.q = $("#search-term")
-//     .val()
-//     .trim();
-
-//     console.log("---------------\nURL: " + queryURL + "\n---------------");
-//     console.log(queryURL + $.param(queryParams));
-//     return queryURL + $.param(queryParams);
-// };
+$.ajax({
+url: queryURL,
+method: "GET"
+});
+.then(function (response) {
+console.log(response);
+}
+artistData("Cher");
 
 
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-// })
 
-// .then(function (response) {
-//     console.log(response);
-// });
 
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-// })
+$('#searchBtn').on('click', function(event) {
+	event.preventDefault();
+	var userInput = $('#userInput')
+		.val()
+		.trim();
 
-// .then(function (response) {
-//     console.log(response);
-// });
+	searchArtist(userInput);
+});
