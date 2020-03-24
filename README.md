@@ -29,17 +29,18 @@ Enter an artist name in the artist search box and click "SUBMIT" or press "Enter
 
 # Contributors
 
-| <a href="https://github.com/gregroyclark " target="_blank">**Gregroy Clark**</a> |
-| [![Gregroy Clark](https://avatars3.githubusercontent.com/u/60209065?s=100&v=4)](https://github.com/gregroyclark)|
+ <a href="https://github.com/gregroyclark " target="_blank">**Gregroy Clark**</a> |
+ <a href="https://github.com/kristincenters " target="_blank">**Kristin Center**</a> |
+ <a href="https://github.com/NKLouis " target="_blank">**Naritchaya Louis**</a> |
+ <a href="https://github.com/git-theresa " target="_blank">**Theresa Eatherly**</a> 
+ -----------------------------------------|---------------------------------------------
 
-|<a href="https://github.com/kristincenters " target="_blank">**Kristin Center**</a> |
-| [![Kristin Center](https://avatars0.githubusercontent.com/u/5201511?s=100&u=461ff279b018cfb15a30162bfd2e45f376926f25&v=4)](https://github.com/kristincenters)
+[![Gregroy Clark](https://avatars3.githubusercontent.com/u/60209065?s=100&v=4)](https://github.com/gregroyclark)|
+[![Kristin Center](https://avatars0.githubusercontent.com/u/5201511?s=100&u=461ff279b018cfb15a30162bfd2e45f376926f25&v=4)](https://github.com/kristincenters)|
+[![Naritchaya Louis](https://avatars1.githubusercontent.com/u/58704859?s=100&u=6adacae3bbfcc4293a859a3550492beb678318a9&v=4)](https://github.com/NKLouis)|
+[![Theresa Eatherly](https://avatars3.githubusercontent.com/u/57425164?s=100&v=4)](https://github.com/git-theresa)
 
-|<a href="https://github.com/NKLouis " target="_blank">**Naritchaya Louis**</a> |
-| [![Naritchaya Louis](https://avatars1.githubusercontent.com/u/58704859?s=100&u=6adacae3bbfcc4293a859a3550492beb678318a9&v=4)](https://github.com/NKLouis)|
-
-|<a href="https://github.com/git-theresa " target="_blank">**Theresa Eatherly **</a> |
-| [![Theresa Eatherly](https://avatars3.githubusercontent.com/u/57425164?s=100&v=4)](https://github.com/git-theresa)|
+-----------------------------------------------------------------------------------------
 
 
 
