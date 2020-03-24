@@ -6,3 +6,7 @@ body {
 	font-family: Roboto;
 	font-size: 400%;
 }
+
+artistName artistSummary .artistImg {
+	border-radius: 50%;
+}
