@@ -37,9 +37,7 @@ function searchArtist(artist) {
 			var similarArtist = $('<div>');
 			$('#similarArtist').empty();
 			$('#similarArtist').text(response.artist.similar.artist[i]);
-			console.log(response.artist.similar.artist[0]);
-			console.log(response.artist.similar.artist[1]);
-			console.log(response.artist.similar.artist[2]);
+			console.log(response.artist.similar.artist[i]);
 			$('#similarArtist').append(similarArtistCard);
 	
 

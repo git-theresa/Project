@@ -16,27 +16,27 @@
 	//discogs URL with Kristin's keys
 			//'https://api.discogs.com/database/search?q=Whitney+Houston&key=nvRXMBDnKmKOoUevQtuL&secret=hJCijCBPkQSmbnplJHWgvxreRNvhKVSN'
 
-			// var key = 'nvRXMBDnKmKOoUevQtuL';
-			// var secret = 'hJCijCBPkQSmbnplJHWgvxreRNvhKVSN';
-			// function artistImage(coverImage) {
-			// 	var discogsURL =
-			// 		'https://api.discogs.com/database/search?q=' +
-			// 		coverImage +
-			// 		'&key=' +
-			// 		key +
-			// 		'&secret=' +
-			// 		secret;
-			// 	console.log(discogsURL);
+			var key = 'nvRXMBDnKmKOoUevQtuL';
+			var secret = 'hJCijCBPkQSmbnplJHWgvxreRNvhKVSN';
+			function artistImage(coverImage) {
+				var discogsURL =
+					'https://api.discogs.com/database/search?q=' +
+					coverImage +
+					'&key=' +
+					key +
+					'&secret=' +
+					secret;
+				console.log(discogsURL);
 
-			// 	$.ajax({ url: discogsURL, method: 'GET' }).then(function(response) {
-			// 		console.log(response);
+				$.ajax({ url: discogsURL, method: 'GET' }).then(function(response) {
+					console.log(response);
 
-			// 		var newImage = $('<img>').attr(
-			// 			'src',
-			// 			response.results[0].cover_image
-			// 		);
-			// 		$('#test').append(newImage);
-			// 	});
-			// }
-			// artistImage('cher');
-			// artistImage('madonna');
+					var newImage = $('<img>').attr(
+						'src',
+						response.results[0].cover_image
+					);
+					$('#test').append(newImage);
+				});
+			}
+			artistImage('cher');
+			artistImage('madonna');
