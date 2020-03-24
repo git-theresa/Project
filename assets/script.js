@@ -13,7 +13,7 @@ function searchArtist(artist) {
 		// EMPTY DIVS BEFORE NEW SEARCH ENTERED:
 		$('#userInput').empty();
 		$('#artist').empty();
-		$('artistName').empty();
+		$('#artistName').empty();
 		$('#listen').empty();
 		$('#bio').empty();
 
@@ -23,10 +23,13 @@ function searchArtist(artist) {
 		$('#artistName').append('<h1>' + response.artist.name + '</h1>' );
 	
 		$('#listen').text(response.artist.url);
-		$('#artistName').append('<a>' + response.artist.url + '</a>');
+		console.log(response.artist.url);
+		$('#artistName').append(`<a href="${response.artist.url}" target="blank">  ${response.artist.url}  </a>`);
+
 	
 		$('#bio').text(response.artist.bio.summary);
 		// console.log(response.artist.bio.summary);
+		$('#artistName').append('<p>' + response.artist.bio.summary + '</p>');
 
 
 			// SIMILAR ARTIST CONTAINER
