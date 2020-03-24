@@ -24,7 +24,7 @@ function searchArtist(artist) {
 		$('#bio').empty();
 		//   BEGIN RESPONSES FROM AJAX CALL
 		$('#artist').text(response.artist.name);
-        // Need to append to <h1> by child or create ID
+		// Need to append to <h1> by child or create ID
 
 		$('#artistName').append('Artist Name: ' + response.artist.name);
 		$('#artistName').addClass('name');
@@ -32,22 +32,18 @@ function searchArtist(artist) {
 		// <a> for url
 		$('#bio').text(response.artist.bio.summary);
 
-// for (var i = 0; i < 5; i++) {
-//     var similarArtistCard = $("<div class='card'>");
-//     var similarArtist = $("<div>");
-//     $("#similarArtist").
-    
-    
+		// for (var i = 0; i < 5; i++) {
+		//     var similarArtistCard = $("<div class='card'>");
+		//     var similarArtist = $("<div>");
+		//     $("#similarArtist").
 
-
-// //END FOR LOOP AJAX 
-// }
-// END 
- });
-// end .then(function(response)...Do not remove "  }):  "
-});
-// END MAIN FUNCTION
+		// //END FOR LOOP AJAX
+		// }
+		// END
+	});
+	// end .then(function(response)...Do not remove "  }):  "
 }
+// END MAIN FUNCTION
 
 //document.ready function(){
 $('#searchBtn').on('click', function(event) {
@@ -68,8 +64,6 @@ searchArtist();
 //$(document).ready(function() {
 //	$('.parallax').parallax();
 //});
-
-
 
 //run(searchArtist);
 // document.ready end
