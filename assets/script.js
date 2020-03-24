@@ -1,5 +1,5 @@
 // Last FM URL + Base + API Keys ONLY
-var fmURLBase = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=bfab0ca7754766e291154f9b56c5cf7b&format=json';
+// var fmURLBase = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=bfab0ca7754766e291154f9b56c5cf7b&format=json';
 var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
 
 // Last FM API call:
