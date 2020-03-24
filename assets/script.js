@@ -20,31 +20,27 @@ function searchArtist(artist) {
 		// EMPTY DIVS BEFORE NEW SEARCH ENTERED:
 		$('#userInput').empty();
 		$('#artist').empty();
+		$('artistName').empty();
 		$('#listen').empty();
 		$('#bio').empty();
 		//   BEGIN RESPONSES FROM AJAX CALL
 		$('#artist').text(response.artist.name);
-		// Need to append to <h1> by child or create ID
-
-		$('#artistName').append('Artist Name: ' + response.artist.name);
-		$('#artistName').addClass('name');
+		console.log(response.artist.name);
+		$('#artistName').append('<h1>' + response.artist.name + '</h1>' );
+	
 		$('#listen').text(response.artist.url);
 		// <a> for url
 		$('#bio').text(response.artist.bio.summary);
-		console.log(response.artist.bio.summary);
+		// console.log(response.artist.bio.summary);
 
 
-
-
-// // $('#similarArtist').empty();
-// $('similarArtist').text(response.similar.artist[0].name);
-// console.log(response.similar.artist.name);
-console.log(similarArtist);
-// $('#similarArtist').empty();
+// SIMILAR ARTIST CONTAINER
+$('#similarArtist').empty();
 
 	for (var i = 0; i < 3; i++) {
 	var similarArtistCard = $("<div class='card'>");
 	var similarArtist = $('<div>');
+	$('similarArtist').empty();
 	$('similarArtist').text(response.artist.similar);
 	console.log(response.artist.similar.artist[0]);
 	console.log(response.artist.similar.artist[1]);
@@ -54,10 +50,7 @@ console.log(similarArtist);
 
 	// //END FOR LOOP AJAX
 	}
-
-		
-
-	
+			
 	});
 	// end .then(function(response)...Do not remove "  }):  "
 }
@@ -77,7 +70,7 @@ $('#searchBtn').on('click', function(event) {
 //const sideNav = document.querySelector('.sidenav');
 //M.Sidenav.init(sideNav, {});
 
-searchArtist();
+// searchArtist();
 //initialize image
 //$(document).ready(function() {
 //	$('.parallax').parallax();
@@ -86,32 +79,31 @@ searchArtist();
 //run(searchArtist);
 // document.ready end
 // 
-/*
+// 
 	//discogs URL with Kristin's keys
 			//'https://api.discogs.com/database/search?q=Whitney+Houston&key=nvRXMBDnKmKOoUevQtuL&secret=hJCijCBPkQSmbnplJHWgvxreRNvhKVSN'
 
-			var key = 'nvRXMBDnKmKOoUevQtuL';
-			var secret = 'hJCijCBPkQSmbnplJHWgvxreRNvhKVSN';
-			function artistImage(coverImage) {
-				var discogsURL =
-					'https://api.discogs.com/database/search?q=' +
-					coverImage +
-					'&key=' +
-					key +
-					'&secret=' +
-					secret;
-				console.log(discogsURL);
+			// var key = 'nvRXMBDnKmKOoUevQtuL';
+			// var secret = 'hJCijCBPkQSmbnplJHWgvxreRNvhKVSN';
+			// function artistImage(coverImage) {
+			// 	var discogsURL =
+			// 		'https://api.discogs.com/database/search?q=' +
+			// 		coverImage +
+			// 		'&key=' +
+			// 		key +
+			// 		'&secret=' +
+			// 		secret;
+			// 	console.log(discogsURL);
 
-				$.ajax({ url: discogsURL, method: 'GET' }).then(function(response) {
-					console.log(response);
+			// 	$.ajax({ url: discogsURL, method: 'GET' }).then(function(response) {
+			// 		console.log(response);
 
-					var newImage = $('<img>').attr(
-						'src',
-						response.results[0].cover_image
-					);
-					$('#test').append(newImage);
-				});
-			}
-			artistImage('cher');
-			artistImage('madonna');
-/*
+			// 		var newImage = $('<img>').attr(
+			// 			'src',
+			// 			response.results[0].cover_image
+			// 		);
+			// 		$('#test').append(newImage);
+			// 	});
+			// }
+			// artistImage('cher');
+			// artistImage('madonna');
