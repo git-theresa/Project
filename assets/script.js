@@ -29,16 +29,16 @@ function searchArtist(artist) {
 		        //   BEGIN RESPONSES FROM AJAX CALL
 		$('#artist').text(response.artist.name);
         // Need to append to <h1> by child or create ID
-
+        $('#artistName').append('<h1>' + response.artist.name + '</h1>');
         console.log(response.artist.name);
-        // $('#artistName').append('Artist Name: ' + response.artist.name);
+        
         $('#listen').text(response.artist.url);
         console.log(response.artist.url);
-        // $('artistSummary').append(URL); 
+        $('#artistSummary').append('<a>' + response.artist.url + '</a>'); 
         // <a> for url
         $('#bio').text(response.artist.bio.summary);
         console.log(response.artist.bio.summary);
-        $('artistSummary').append(response.artist.bio.summary);
+        $('#artistSummary').append(response.artist.bio.summary);
         
  // SIMILAR ARTIST FUNCTION
  var fmURL =
@@ -49,25 +49,30 @@ function searchArtist(artist) {
  '&format=json';
  $.ajax({url: fmURL, method: "GET"})
  .then(function(similarArtist) {
- console.log(similarArtist)
- 
-// //  $('#similarArtist').empty();
-// $('similarArtist').text(response.similar.artist[0].name);
-// console.log(response.similar.artist.name);
+ console.log(similarArtist);
+ //  $('#similarArtist').empty();
+
+for (var i = 0; i < 3; i++) {
+    var similarArtistCard = $("<div class='card'>");
+    var similarArtist = $("<div>");
+
+$('similarArtist').text(response.artist.similar);
+console.log(response.artist.similar.artist[0]);
+console.log(response.artist.similar.artist[1]);
+console.log(response.artist.similar.artist[2]);
+$('#similarArtist').append(similarArtistCard);
  
 
-// for (var i = 0; i < 5; i++) {
-//     var similarArtistCard = $("<div class='card'>");
-//     var similarArtist = $("<div>");
-//     $("#similarArtist").
+
+
     
-    
+
 
 
 // //END FOR LOOP AJAX 
-// }
+}
 // END 
- });
+ })
 // end .then(function(response)...Do not remove "  }):  "
 });
 // END MAIN FUNCTION
