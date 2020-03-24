@@ -29,7 +29,8 @@ function searchArtist(artist) {
 		$('#artistName').append('<h1>' + response.artist.name + '</h1>' );
 	
 		$('#listen').text(response.artist.url);
-		// <a> for url
+		$('#artistName').append('<a>' + response.artist.url + '</a>');
+	
 		$('#bio').text(response.artist.bio.summary);
 		// console.log(response.artist.bio.summary);
 
@@ -40,8 +41,8 @@ $('#similarArtist').empty();
 	for (var i = 0; i < 3; i++) {
 	var similarArtistCard = $("<div class='card'>");
 	var similarArtist = $('<div>');
-	$('similarArtist').empty();
-	$('similarArtist').text(response.artist.similar);
+	$('#similarArtist').empty();
+	$('#similarArtist').text(response.artist.similar.artist[i]);
 	console.log(response.artist.similar.artist[0]);
 	console.log(response.artist.similar.artist[1]);
 	console.log(response.artist.similar.artist[2]);
