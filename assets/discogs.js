@@ -1,4 +1,5 @@
-// ----------------------------New API --------------------- THIS NEEDS A SEPARATE PAGE TO MAKE IT FUNCTION FIRST
+// ----------------------------New API --------------------- 
+//THIS NEEDS A SEPARATE PAGE TO MAKE IT FUNCTION FIRST
 //sidenav
 // const sideNav = document.querySelector('.sidenav');
 // M.Sidenav.init(sideNav, {});
@@ -11,8 +12,7 @@
 
 // run(searchArtist);
 // document.ready end
-// 
-// 
+
 //discogs URL with Kristin's keys
 //'https://api.discogs.com/database/search?q=Whitney+Houston&key=nvRXMBDnKmKOoUevQtuL&secret=hJCijCBPkQSmbnplJHWgvxreRNvhKVSN'
 
