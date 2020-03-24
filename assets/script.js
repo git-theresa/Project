@@ -4,7 +4,7 @@ var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
 
 // Last FM API call:
 function searchArtist(artist) {
-	var fmURL = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=' + fmAPIKey + '&format=json';
+	var fmURL = 'https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=' + fmAPIKey + '&format=json';
 	console.log(fmURL);
 
 		$.ajax({ url: fmURL, method: 'GET' }).then(function(response) {
