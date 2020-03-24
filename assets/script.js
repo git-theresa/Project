@@ -31,15 +31,33 @@ function searchArtist(artist) {
 		$('#listen').text(response.artist.url);
 		// <a> for url
 		$('#bio').text(response.artist.bio.summary);
+		console.log(response.artist.bio.summary);
 
-		// for (var i = 0; i < 5; i++) {
-		//     var similarArtistCard = $("<div class='card'>");
-		//     var similarArtist = $("<div>");
-		//     $("#similarArtist").
 
-		// //END FOR LOOP AJAX
-		// }
-		// END
+
+
+// // $('#similarArtist').empty();
+// $('similarArtist').text(response.similar.artist[0].name);
+// console.log(response.similar.artist.name);
+console.log(similarArtist);
+// $('#similarArtist').empty();
+
+	for (var i = 0; i < 3; i++) {
+	var similarArtistCard = $("<div class='card'>");
+	var similarArtist = $('<div>');
+	$('similarArtist').text(response.artist.similar);
+	console.log(response.artist.similar.artist[0]);
+	console.log(response.artist.similar.artist[1]);
+	console.log(response.artist.similar.artist[2]);
+	$('#similarArtist').append(similarArtistCard);
+	
+
+	// //END FOR LOOP AJAX
+	}
+
+		
+
+	
 	});
 	// end .then(function(response)...Do not remove "  }):  "
 }
