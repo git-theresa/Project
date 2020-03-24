@@ -1,15 +1,15 @@
 // ----------------------------New API --------------------- THIS NEEDS A SEPARATE PAGE TO MAKE IT FUNCTION FIRST
 //sidenav
-//const sideNav = document.querySelector('.sidenav');
-//M.Sidenav.init(sideNav, {});
+// const sideNav = document.querySelector('.sidenav');
+// M.Sidenav.init(sideNav, {});
 
 // searchArtist();
-//initialize image
-//$(document).ready(function() {
-//	$('.parallax').parallax();
-//});
+// //initialize image
+// $(document).ready(function() {
+// 	$('.parallax').parallax();
+// });
 
-//run(searchArtist);
+// run(searchArtist);
 // document.ready end
 // 
 // 
@@ -38,5 +38,5 @@
 					$('#test').append(newImage);
 				});
 			}
-			artistImage('cher');
-			artistImage('madonna');
+			artistImage('');
+			artistImage('');
