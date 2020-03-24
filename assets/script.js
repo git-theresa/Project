@@ -36,21 +36,24 @@ function searchArtist(artist) {
 			$('#similarArtist').empty();
 
 			for (var i = 0; i < 3; i++) {
-			var similarArtistCard = $("<div class='card-deck'>");
+			var similarArtistCard = $("<div class='card'>");
 			var similarArtist = $('<div>');
 			$('#similarArtist').empty();
 			$('#similarArtist').text(response.artist.similar.artist[i].name );
-			// var similarArtistURL = $('<p>');
-			$('#similarArtistURL').text('<p>' + `<a href="${response.artist.similar.artist[i].url}" target="blank">  ${response.artist.similar.artist[i].url}  </a>` + '</p>');
 			console.log(response.artist.similar.artist[0].name);
-			console.log(response.artist.similar.artist[1]);
-			console.log(response.artist.similar.artist[2]);
+			console.log(response.artist.similar.artist[1].name);
+			console.log(response.artist.similar.artist[2].name);
+
+			var similarArtistURL = $('<div>');
+			$('#similarArtistURL').text(response.artist.similar.artist[i].url);
+			console.log(response.artist.similar.artist[i].url);
+			$('#similarArtist').append(`<a href="${response.artist.similar.artist[i].url}" target="blank">  ${response.artist.similar.artist[i].url}  </a>`)
+			
 			
 			
 			similarArtist.append(similarArtistCard);
 			$("#similarArtist").append(similarArtistCard);
-			// similarArtistURL.append(similarArtistCard);
-			// $('#similarArtistURL').append(similarArtistCard)
+			
 
 			// //END FOR LOOP AJAX - DO NOT REMOVE "}"
 			}
