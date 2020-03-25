@@ -12,6 +12,9 @@ body {
 	width: 50%;
 }
 div.image {
-	width: 200px;
+	display: block;
 	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
