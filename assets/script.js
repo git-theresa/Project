@@ -39,6 +39,7 @@ function searchArtist(artist) {
 			var similarArtistCard = $("<div class='card'>");
 			var similarArtist = $('<div>');
 			$('#similarArtist').empty();
+
 			$('#similarArtist').text(response.artist.similar.artist[i].name );
 			console.log(response.artist.similar.artist[0].name);
 			console.log(response.artist.similar.artist[1].name);
@@ -54,6 +55,7 @@ function searchArtist(artist) {
 			similarArtist.append(similarArtistCard);
 			$("#similarArtist").append(similarArtistCard);
 			
+
 
 			// //END FOR LOOP AJAX - DO NOT REMOVE "}"
 			}
@@ -95,10 +97,8 @@ var userInput = $('#userInput').val().trim();
 searchArtist(userInput);
 });
 
-
-
-
-// ----------------------------New API --------------------- THIS NEEDS A SEPARATE PAGE TO MAKE IT FUNCTION FIRST
+// ----------------------------New API --------------------- 
+//THIS NEEDS A SEPARATE PAGE TO MAKE IT FUNCTION FIRST
 //sidenav
 //const sideNav = document.querySelector('.sidenav');
 //M.Sidenav.init(sideNav, {});
@@ -111,7 +111,6 @@ searchArtist(userInput);
 
 //run(searchArtist);
 // document.ready end
-// 
 // 
 	//discogs URL with Kristin's keys
 			//'https://api.discogs.com/database/search?q=Whitney+Houston&key=nvRXMBDnKmKOoUevQtuL&secret=hJCijCBPkQSmbnplJHWgvxreRNvhKVSN'
