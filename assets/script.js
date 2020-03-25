@@ -86,7 +86,9 @@ function searchArtist(artist) {
 						'src',
 						response.results[0].cover_image
 					);
-					$('#test').append(newImage);
+					$('#artistImg').append(newImage);
+					$('#coverImage').append(newImage);
+					
 				});
 			}
 			artistImage();	
