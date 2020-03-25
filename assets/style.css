@@ -11,3 +11,7 @@ body {
 	border-radius: 50%;
 	width: 50%;
 }
+div.image {
+	width: 200px;
+	border-radius: 50%;
+}
