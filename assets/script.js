@@ -3,10 +3,10 @@ var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
 // Last FM API call:
 function searchArtist(artist) {
 	var fmURL = 'https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=' + fmAPIKey + '&format=json';
-	
+
 
 	$.ajax({ url: fmURL, method: 'GET' }).then(function (response) {
-		
+
 
 		// EMPTY DIVS BEFORE NEW SEARCH ENTERED:
 		$('#userInput').empty();
@@ -15,18 +15,18 @@ function searchArtist(artist) {
 		$('#listen').empty();
 		$('#bio').empty();
 
-		//   BEGIN RESPONSES FROM AJAX CALL
+		// BEGIN RESPONSES FROM AJAX CALL
 		$('#artist').text(response.artist.name);
-		
+
 		$('#artistName').append('<h1>' + response.artist.name + '</h1>');
 
 		$('#listen').text(response.artist.url);
-		
+
 		$('#artistName').append(`<a href="${response.artist.url}" target="blank">  ${response.artist.url}  </a>`);
 
 
 		$('#bio').text(response.artist.bio.summary);
-		
+
 		$('#artistName').append('<p>' + response.artist.bio.summary + '</p>');
 
 
@@ -39,11 +39,11 @@ function searchArtist(artist) {
 			$('#similarArtist').empty();
 
 			$('#similarArtist').text(response.artist.similar.artist[i].name);
-			
+
 
 			var similarArtistURL = $('<div>');
 			$('#similarArtistURL').text(response.artist.similar.artist[i].url);
-			
+
 			$('#similarArtist').append(`<a href="${response.artist.similar.artist[i].url}" target="blank">  ${response.artist.similar.artist[i].url}  </a>`)
 
 
@@ -77,12 +77,8 @@ function searchArtist(artist) {
 		}
 		artistImage();
 	});
-	// end .then(function(response)...Do not remove "  }):  "
-
-
 
 }
-// END MAIN FUNCTION - DO NOT REMOVE ABOVE "}"
 
 function artistImage(coverImage) {
 	var key = 'nvRXMBDnKmKOoUevQtuL';
@@ -93,15 +89,9 @@ function artistImage(coverImage) {
 		'&key=' +
 		key +
 		'&secret=' +
-		secret;
-	console.log(discogsURL);
-	console.log(coverImage);
+		secret;;
 
 	$.ajax({ url: discogsURL, method: 'GET' }).then(function (response) {
-		console.log(response);
-
-
-
 		var newImage = $('<img>').attr(
 			'src',
 			response.results[0].cover_image
@@ -111,8 +101,6 @@ function artistImage(coverImage) {
 	});
 }
 
-
-//document.ready function(){
 $('#searchBtn').on('click', function (event) {
 	event.preventDefault();
 	var userInput = $('#userInput').val().trim();
