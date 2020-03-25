@@ -60,8 +60,18 @@ function searchArtist(artist) {
 			
 	});
 	// end .then(function(response)...Do not remove "  }):  "
+
+// INSERT 2ND AJAX CALL ----------
+
+
+
 }
 // END MAIN FUNCTION - DO NOT REMOVE ABOVE "}"
+
+
+
+
+
 
 //document.ready function(){
 $('#searchBtn').on('click', function(event) {
