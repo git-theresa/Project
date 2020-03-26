@@ -40,17 +40,8 @@ function searchArtist(artist) {
 			);
 			similarArtist.append(similarArtistCard);
 			$('#similarArtist').append(similarArtistCard);
-			
-			// //END FOR LOOP AJAX - DO NOT REMOVE "}"
-			}		
-	// END .then(function(response)...Do not remove "  }):
-	});
-// END MAIN FUNCTION - DO NOT REMOVE ABOVE "}"
-}
 
-//Reference URL as a go by for building query string
-('https://api.discogs.com/database/search?q=Whitney+Houston&key=nvRXMBDnKmKOoUevQtuL&secret=hJCijCBPkQSmbnplJHWgvxreRNvhKVSN');
-//build query URL using params of key and secret
+ //build query URL using params of key and secret
 function artistImage(coverImage) {
 	var key = 'nvRXMBDnKmKOoUevQtuL';
 	var secret = 'hJCijCBPkQSmbnplJHWgvxreRNvhKVSN';
@@ -63,9 +54,8 @@ function artistImage(coverImage) {
 		secret;
 
 	$.ajax({ url: discogsURL, method: 'GET' }).then(function(response) {
-		var newImage = $('<img>').attr('src', response.results[0].cover_image);
 		$('#artistImg').empty();
-		$('#artistImg').append(newImage);
+		$('#artistImg').attr('src', response.results[0].cover_image);
 	});
 }
 
