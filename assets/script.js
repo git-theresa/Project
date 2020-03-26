@@ -40,6 +40,9 @@ function searchArtist(artist) {
 			);
 			similarArtist.append(similarArtistCard);
 			$('#similarArtist').append(similarArtistCard);
+			}
+	});
+}		
 
  //build query URL using params of key and secret
 function artistImage(coverImage) {
@@ -68,5 +71,5 @@ $(document).ready(function () {
 		.trim();
 	searchArtist(userInput);
 	artistImage(userInput);
-	});
+	})
 });
