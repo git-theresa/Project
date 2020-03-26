@@ -52,13 +52,11 @@ function searchArtist(artist) {
 			similarArtist.append(similarArtistCard);
 			$('#similarArtist').append(similarArtistCard);
 		}
-		// //END FOR LOOP AJAX - DO NOT REMOVE "}"
+		
 	});
-	// end .then(function(response)...Do not remove "  }):
+	
 }
-// END MAIN FUNCTION - DO NOT REMOVE ABOVE "}"
-//Reference URL as a go by for building query string
-('https://api.discogs.com/database/search?q=Whitney+Houston&key=nvRXMBDnKmKOoUevQtuL&secret=hJCijCBPkQSmbnplJHWgvxreRNvhKVSN');
+
 //build query URL using params of key and secret
 function artistImage(coverImage) {
 	var key = 'nvRXMBDnKmKOoUevQtuL';

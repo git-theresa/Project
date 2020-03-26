@@ -7,7 +7,7 @@ A music website that provides a current picture, biography, and songs of your fa
 
 https://git-theresa.github.io/Project/
 
-![](http://g.recordit.co/JzfjfQKV5L.gif)
+![](http://g.recordit.co/ThknKiHJxf.gif)
 
 
 
