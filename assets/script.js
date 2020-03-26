@@ -55,7 +55,7 @@ function artistImage(coverImage) {
 
 	$.ajax({ url: discogsURL, method: 'GET' }).then(function(response) {
 		$('#artistImg').empty();
-		$('#artistImg').attr('src', response.results[0].cover_image);
+		$('#artistImg').attr('src', response.results[0].thumb);
 	});
 }
 
