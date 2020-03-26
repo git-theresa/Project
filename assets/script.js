@@ -69,12 +69,14 @@ function artistImage(coverImage) {
 	});
 }
 
+$(document).ready(function () {
 // On Click Function
-$('#searchBtn').on('click', function(event) {
+	$('#searchBtn').on('click', function(event) {
 	event.preventDefault();
 	var userInput = $('#userInput')
 		.val()
 		.trim();
 	searchArtist(userInput);
 	artistImage(userInput);
+	});
 });
