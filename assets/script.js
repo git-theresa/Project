@@ -12,8 +12,7 @@ function searchArtist(artist) {
 	$.ajax({ url: fmURL, method: 'GET' }).then(function(response) {
 		// EMPTY DIVS BEFORE NEW SEARCH ENTERED:
 		$('#userInput').empty();
-		$('#artist').empty();
-		$('#artistName').empty();
+		$('#artist').empty();		
 		$('#listen').empty();
 		$('#bio').empty();
 
@@ -42,22 +41,7 @@ function searchArtist(artist) {
 			similarArtist.append(similarArtistCard);
 			$('#similarArtist').append(similarArtistCard);
 
-			console.log(response.artist.similar.artist[i].url);
-			$('#similarArtist').append(
-				`<a href="${response.artist.similar.artist[i].url}" target="blank">  ${response.artist.similar.artist[i].url}  </a>`
-			);
-			$('#similarArtist').append(
-				`<a href="${response.artist.similar.artist[i].url}" target="blank">  ${response.artist.similar.artist[i].url}  </a>`
-			);
-			similarArtist.append(similarArtistCard);
-			$('#similarArtist').append(similarArtistCard);
-		}
-		
-	});
-	
-}
-
-//build query URL using params of key and secret
+ //build query URL using params of key and secret
 function artistImage(coverImage) {
 	var key = 'nvRXMBDnKmKOoUevQtuL';
 	var secret = 'hJCijCBPkQSmbnplJHWgvxreRNvhKVSN';
@@ -75,6 +59,7 @@ function artistImage(coverImage) {
 	});
 }
 
+// On Click Function
 $('#searchBtn').on('click', function(event) {
 	event.preventDefault();
 	var userInput = $('#userInput')
