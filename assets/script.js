@@ -1,107 +1,56 @@
-// Last FM URL + Base + API Keys ONLY
-// var fmURLBase = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=bfab0ca7754766e291154f9b56c5cf7b&format=json';
 var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
 
 // Last FM API call:
 function searchArtist(artist) {
-	var fmURL = 'https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=' + fmAPIKey + '&format=json';
-	//console.log(fmURL);
+	var fmURL =
+		'https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' +
+		artist +
+		'&api_key=' +
+		fmAPIKey +
+		'&format=json';
 
-		$.ajax({ url: fmURL, method: 'GET' }).then(function(response) {
-		//console.log(response);
-
+	$.ajax({ url: fmURL, method: 'GET' }).then(function(response) {
 		// EMPTY DIVS BEFORE NEW SEARCH ENTERED:
 		$('#userInput').empty();
-		$('#artist').empty();
-		$('#artistName').empty();
+		$('#artist').empty();		
 		$('#listen').empty();
 		$('#bio').empty();
 
-		//   BEGIN RESPONSES FROM AJAX CALL
+		// BEGIN RESPONSES FROM AJAX CALL
 		$('#artist').text(response.artist.name);
-		//console.log(response.artist.name);
-		$('#artistName').append('<h1>' + response.artist.name + '</h1>' );
-	
+		$('#artistName').append('<h1>' + response.artist.name + '</h1>');
 		$('#listen').text(response.artist.url);
-		//console.log(response.artist.url);
-		$('#artistName').append(`<a href="${response.artist.url}" target="blank">  ${response.artist.url}  </a>`);
-
-	
+		$('#artistName').append(
+			`<a href="${response.artist.url}" target="blank">  ${response.artist.url}  </a>`
+		);
 		$('#bio').text(response.artist.bio.summary);
-		// console.log(response.artist.bio.summary);
 		$('#artistName').append('<p>' + response.artist.bio.summary + '</p>');
 
-
-			// SIMILAR ARTIST CONTAINER
-			$('#similarArtist').empty();
-
-			for (var i = 0; i < 3; i++) {
+		// SIMILAR ARTIST CONTAINER
+		$('#similarArtist').empty();
+		for (var i = 0; i < 3; i++) {
 			var similarArtistCard = $("<div class='card'>");
 			var similarArtist = $('<div>');
 			$('#similarArtist').empty();
-
-			$('#similarArtist').text(response.artist.similar.artist[i].name );
-			// console.log(response.artist.similar.artist[0].name);
-			// console.log(response.artist.similar.artist[1].name);
-			// console.log(response.artist.similar.artist[2].name);
-
+			$('#similarArtist').text(response.artist.similar.artist[i].name);
 			var similarArtistURL = $('<div>');
 			$('#similarArtistURL').text(response.artist.similar.artist[i].url);
-
-			console.log(response.artist.similar.artist[i].url);
-			$('#similarArtist').append(`<a href="${response.artist.similar.artist[i].url}" target="blank">  ${response.artist.similar.artist[i].url}  </a>`);
-
-			//console.log(response.artist.similar.artist[i].url);
-			$('#similarArtist').append(`<a href="${response.artist.similar.artist[i].url}" target="blank">  ${response.artist.similar.artist[i].url}  </a>`)
-
-			
-			
+			$('#similarArtist').append(
+				`<a href="${response.artist.similar.artist[i].url}" target="blank">  ${response.artist.similar.artist[i].url}  </a>`
+			);
 			similarArtist.append(similarArtistCard);
-			$("#similarArtist").append(similarArtistCard);
+			$('#similarArtist').append(similarArtistCard);
 			
-
-
 			// //END FOR LOOP AJAX - DO NOT REMOVE "}"
-			}
-
-			
-			'https://api.discogs.com/database/search?q=Whitney+Houston&key=nvRXMBDnKmKOoUevQtuL&secret=hJCijCBPkQSmbnplJHWgvxreRNvhKVSN'
-
-			var key = 'nvRXMBDnKmKOoUevQtuL';
-			var secret = 'hJCijCBPkQSmbnplJHWgvxreRNvhKVSN';
-			function artistImage(coverImage) {
-				var discogsURL =
-					'https://api.discogs.com/database/search?q=' +
-					coverImage +
-					'&key=' +
-					key +
-					'&secret=' +
-					secret;
-				console.log(discogsURL);
-
-				$.ajax({ url: discogsURL, method: 'GET' }).then(function(response) {
-					console.log(response);
-
-					var newImage = $('<img>').attr(
-						'src',
-						response.results[0].cover_image
-					);
-					$('#artistImg').append(newImage);
-					$('#coverImage').append(newImage);
-					
-				});
-			}
-			artistImage();	
+			}		
+	// END .then(function(response)...Do not remove "  }):
 	});
-	// end .then(function(response)...Do not remove "  }):  "
-
-
-
-
+// END MAIN FUNCTION - DO NOT REMOVE ABOVE "}"
 }
 
-// END MAIN FUNCTION - DO NOT REMOVE ABOVE "}"
-
+//Reference URL as a go by for building query string
+('https://api.discogs.com/database/search?q=Whitney+Houston&key=nvRXMBDnKmKOoUevQtuL&secret=hJCijCBPkQSmbnplJHWgvxreRNvhKVSN');
+//build query URL using params of key and secret
 function artistImage(coverImage) {
 	var key = 'nvRXMBDnKmKOoUevQtuL';
 	var secret = 'hJCijCBPkQSmbnplJHWgvxreRNvhKVSN';
@@ -112,31 +61,20 @@ function artistImage(coverImage) {
 		key +
 		'&secret=' +
 		secret;
-	console.log(discogsURL);
-	console.log(coverImage);
 
 	$.ajax({ url: discogsURL, method: 'GET' }).then(function(response) {
-		console.log(response);
-
-
-
-		var newImage = $('<img>').attr(
-			'src',
-			response.results[0].cover_image
-		);
+		var newImage = $('<img>').attr('src', response.results[0].cover_image);
 		$('#artistImg').empty();
 		$('#artistImg').append(newImage);
 	});
 }
 
-
-//document.ready function(){
+// On Click Function
 $('#searchBtn').on('click', function(event) {
-event.preventDefault();
-var userInput = $('#userInput').val().trim();
-searchArtist(userInput);
-
-
-artistImage(userInput);
+	event.preventDefault();
+	var userInput = $('#userInput')
+		.val()
+		.trim();
+	searchArtist(userInput);
+	artistImage(userInput);
 });
-

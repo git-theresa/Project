@@ -27,15 +27,13 @@ Enter an artist name in the artist search box and click "SUBMIT" or press "Enter
 
 # Contributors
 
-@gregroyclark <a href="https://github.com/gregroyclark " target="_blank"></a> |
+ -<a href="https://github.com/gregroyclark " target="_blank">@gregroyclark</a> 
 
-@kristincenters <a href="https://github.com/kristincenters " target="_blank"></a> |
+ -<a href="https://github.com/kristincenters " target="_blank">@kristincenters</a>
 
-@NKLouis <a href="https://github.com/NKLouis " target="_blank"></a> |
+ -<a href="https://github.com/NKLouis " target="_blank">@NKLouis</a>
 
-@git-theresa <a href="https://github.com/git-theresa " target="_blank"></a> |
-
-|---------------|-----------------|
+ -<a href="https://github.com/git-theresa " target="_blank">@git-theresa </a> 
 
 
 

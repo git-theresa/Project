@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 body {
 	min-height: 200 vh;
 }
@@ -5,8 +8,12 @@ body {
 	color: black;
 	font-family: Roboto;
 	font-size: 400%;
+	width: 75%;
+	float: left;
 }
-
-artistName artistSummary .artistImg {
+div.image {
+	display: block;
 	border-radius: 50%;
+	width: 25%;
+	float: left;
 }
