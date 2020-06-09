@@ -1,10 +1,15 @@
-# Fast Facts about your Favorite Artist
+<img align="left" src= "https://img.shields.io/badge/License-MIT-green">
 
-A music website that provides a current picture, biography, and songs of your favorit artists. Also a recomendation for similar artist that you might like.
+# 
+
+# **Q.Jamz**
+
+## About
+
+A music website that provides a current picture, biography, and songs of your favorite artists. Also a recommendation for similar artist that you might like.
 
 
 # Live Link: 
-
 https://git-theresa.github.io/Project/
 
 ![](http://g.recordit.co/ThknKiHJxf.gif)
@@ -12,18 +17,17 @@ https://git-theresa.github.io/Project/
 
 
 # Technology Stacks
-
-- Last.fm API
-- Discogs API
 - HTML/CSS
+- Materialize
 - JavaScript
 - jQuery
 
 
-# Deployment 
+# Usage
 
 Enter an artist name in the artist search box and click "SUBMIT" or press "Enter" on your keyboard. The artist picture and a brief biography will be shown under the search box as well as a list of a similar artist you might like.
 
+<img src ="assets/img/qjamz.png">
 
 # Contributors
 
