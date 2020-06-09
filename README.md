@@ -41,5 +41,4 @@ Enter an artist name in the artist search box and click "SUBMIT" or press "Enter
 
 
 
-# License
-MIT
+
