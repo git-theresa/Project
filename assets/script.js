@@ -10,9 +10,9 @@ $(document).ready(function () {
 			.trim();
 		searchArtist(userInput);
 		artistImage(userInput);
-		})
+		});
 	});
-	
+
 // Last FM API call:
 function searchArtist(artist) {
 	var fmURL =
