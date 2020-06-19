@@ -1,5 +1,18 @@
 var fmAPIKey = 'bfab0ca7754766e291154f9b56c5cf7b';
 
+
+$(document).ready(function () {
+	// On Click Function
+		$('#searchBtn').on('click', function(event) {
+		event.preventDefault();
+		var userInput = $('#userInput')
+			.val()
+			.trim();
+		searchArtist(userInput);
+		artistImage(userInput);
+		})
+	});
+	
 // Last FM API call:
 function searchArtist(artist) {
 	var fmURL =
@@ -38,7 +51,7 @@ function searchArtist(artist) {
 			$('#similarArtist').append(
 				`<a href="${response.artist.similar.artist[i].url}" target="blank">  ${response.artist.similar.artist[i].url}  </a>`
 			);
-			similarArtist.append(similarArtistCard);
+
 			$('#similarArtist').append(similarArtistCard);
 			}
 	});
@@ -62,14 +75,4 @@ function artistImage(coverImage) {
 	});
 }
 
-$(document).ready(function () {
-// On Click Function
-	$('#searchBtn').on('click', function(event) {
-	event.preventDefault();
-	var userInput = $('#userInput')
-		.val()
-		.trim();
-	searchArtist(userInput);
-	artistImage(userInput);
-	})
-});
+
